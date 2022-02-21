@@ -1,5 +1,11 @@
 class MetaversesController < ApplicationController
+
   before_action :find_by_id, only: [:edit, :update]
+
+  def index
+    @metaverses = Metaverse.all
+  end
+  
 
   def edit
   end
@@ -30,4 +36,5 @@ class MetaversesController < ApplicationController
     def find_by_id
       @metaverse = Metaverse.find(params[:id])
     end
+
 end

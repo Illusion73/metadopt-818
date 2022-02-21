@@ -3,11 +3,12 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  has_many :metaverses
+  has_many :metaverses, dependent: :destroy
   has_many :reviews
   has_many :bookings
-  has_many :metaverses, through: :bookings
+  has_many :booked_metaverses, through: :bookings, source: :metaverses
 
   validates :first_name, presence: true
   validates :last_name, presence: true
+
 end
