@@ -1,0 +1,14 @@
+
+<div class="container">
+<h1>Create your new Metaverse, change the world</h1>
+
+<%= form_for(@metaverse) do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+    <%= f.submit %>
+<% end %>
+</div>
