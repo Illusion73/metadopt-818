@@ -1,0 +1,2 @@
+class MetaversesController < ApplicationController
+end
