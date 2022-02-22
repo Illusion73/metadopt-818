@@ -1,3 +1,7 @@
+<header>
+  <%= render "shared/navbar" %>
+</header>
+
 <div class="container">
   <div>
     <h1>Show</h1>
@@ -13,4 +17,7 @@
       <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
     </div>
   </div>
+
+  <%= link_to "Back to all Metaverses", metaverses_path, class: "btn btn-primary"%>
+
 </div>
