@@ -4,9 +4,12 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   resources :metaverses do
     resources :bookings
+    resources :reviews, only: [:index] #Delete if unnecessary
   end
   resources :bookings, only: [] do
-    resources :reviews, only: [ :new, :create ]
+    resources :reviews, only: [:new, :create]
   end
+
+  resources :reviews, only: [:show]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
