@@ -2,5 +2,6 @@ class Review < ApplicationRecord
   belongs_to :user
   belongs_to :booking
 
-  validates :rating, presence: true, inclusion: { in: [0..5] }
+  validates :rating, presence: true
+  validates :rating, numericality: {only_integer: true, greater_than_or_equal_to: 0, less_than_or_equal_to: 5}
 end

@@ -1,1 +1,13 @@
-<h2>Review NEW</h2>
+
+<div class="container my-5 w-75">
+  <div>
+    <h1 class="text-center mb-5 border-bottom pb-4">Please give a review to your trip</h1>
+    <%= simple_form_for([@booking, @review]) do |f| %>
+      <%= f.input :rating, class: "mb-3" %>
+      <%= f.input :content, class: "mb-3"  %>
+      <%= f.button :submit, class: "btn btn-success my-2 w-100"%>
+    <% end %>
+  </div>
+
+  <%= link_to "Back", booking_path(@booking), class: "btn btn-primary w-100 mt-2" %>
+</div>

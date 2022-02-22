@@ -4,9 +4,6 @@ class ReviewsController < ApplicationController
 
   def index
     @reviews = @metaverse.reviews
-    # set up mon metaverse ok
-
-
   end
 
   def new
@@ -17,9 +14,10 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @review.booking = @booking
     @review.user = current_user
+    @metaverse = @booking.metaverse
 
     if @review.save
-      redirect_to booking_reviews_path(@booking, @review)
+      redirect_to metaverse_path(@metaverse)
     else
       render :new
     end

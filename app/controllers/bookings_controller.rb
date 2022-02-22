@@ -1,8 +1,8 @@
 class BookingsController < ApplicationController
-  before_action :find_by_id, only: [:show, :new, :create]
+  before_action :set_booking, only: [:show, :destroy, :edit, :update]
+  before_action :set_metaverse, only: [:new, :create, :edit, :update]
 
   def new
-    # @user = User.find(params[:user_id])
     @booking = Booking.new
   end
 
@@ -22,12 +22,32 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
   end
 
+  def edit
+  end
+
+  def update
+    @booking.update(booking_params)
+    redirect_to metaverse_booking_path(@metaverse, @booking)
+  end
+
+  def destroy
+    @booking.destroy
+    redirect_to metaverses_path
+  end
+
   private
+
     def booking_params
       params.require(:booking).permit(:metaverse_id, :start_at, :end_at, :user_id)
     end
 
-    def find_by_id
-      @metaverse = Metaverse.find(params[:metaverse_id])
+    def set_booking
+      id = params[:id] || params[:booking_id]
+      @booking = Booking.find(id)
+    end
+
+    def set_metaverse
+      id = params[:id] || params[:metaverse_id]
+      @metaverse = Metaverse.find(id)
     end
 end
