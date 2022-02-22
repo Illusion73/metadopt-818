@@ -3,11 +3,11 @@
 
 
 <div class="container">
-  <div class="row">
-    <% @metaverses.each do |metaverse| %>
+  <div class="row">    <% @metaverses.each do |metaverse| %>
+
       <div class="col-sm-6 mb-5">
         <div class="card" style="width: 30rem;">
-          <img class="card-img-top" src="https://uploads-ssl.webflow.com/60c87f02fbe073bb45bb8b3d/61a8d63c39874f2beb7ed0d8_article23-1.jpeg" alt="Card image cap">
+          <img class="card-img-top" src=<%= metaverse.principal_picture%> alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title"><%= metaverse.title %></h5>
             <p class="card-text"><%= metaverse.price %>€</p>
