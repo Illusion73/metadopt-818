@@ -30,6 +30,13 @@ class MetaversesController < ApplicationController
     end
   end
 
+  def destroy
+    @metaverse = Metaverse.find(params[:id])
+    @metaverse.destroy
+
+    redirect_to metaverses_path
+  end
+
   private
     def metaverse_params
       params.require(:metaverse).permit(:title, :description, :price)
