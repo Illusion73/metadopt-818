@@ -1,11 +1,13 @@
 class MetaversesController < ApplicationController
 
-  before_action :find_by_id, only: [:edit, :update]
+  before_action :find_by_id, only: [:edit, :update, :show]
 
   def index
     @metaverses = Metaverse.all
   end
-
+  
+  def show
+  end
 
   def edit
   end
