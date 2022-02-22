@@ -22,7 +22,9 @@ class MetaversesController < ApplicationController
   end
 
   def create
+    @user = current_user
     @metaverse = Metaverse.new(metaverse_params)
+    @metaverse.user = @user
     if @metaverse.save
       redirect_to metaverse_path(@metaverse)
     else
