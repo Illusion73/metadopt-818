@@ -16,6 +16,7 @@
       <h2 class="card-trip-pricing"><%= @metaverse.price %> € / jour</h2>
       <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
     </div>
+    <%= link_to "Book it", new_metaverse_booking_path(@metaverse)%>
   </div>
 
   <%= link_to "Back to all Metaverses", metaverses_path, class: "btn btn-primary"%>
