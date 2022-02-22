@@ -9,8 +9,9 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @metaverse = Metaverse.find(params[:metaverse_id])
     @booking.metaverse = @metaverse
+    @booking.user = current_user
 
-    if @booking.save
+    if @booking.save!
       redirect_to booking_path(@booking)
     else
       render :new
