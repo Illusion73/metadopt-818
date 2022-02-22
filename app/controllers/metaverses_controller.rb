@@ -5,7 +5,7 @@ class MetaversesController < ApplicationController
   def index
     @metaverses = Metaverse.all
   end
-  
+
   def show
   end
 

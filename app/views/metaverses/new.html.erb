@@ -1,7 +1,7 @@
 
-<div class="container">
+<div class="container" >
   <h1>Create your new Metaverse, change the world</h1>
-
+  <br>
   <%= form_for(@metaverse) do |f| %>
       <%= f.label :title %>
       <%= f.text_field :title %>
@@ -9,8 +9,11 @@
       <%= f.text_field :description %>
       <%= f.label :price %>
       <%= f.text_field :price %>
+      <%= f.label :picture %>
+      <%= f.text_field :principal_picture %>
       <%= f.submit %>
   <% end %>
+  <br>
   <div>
     <%= link_to "Back to list", metaverses_path, class: "btn btn-primary" %>
   </div>
