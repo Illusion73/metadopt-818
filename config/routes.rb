@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :users, only: [:show]
   resources :metaverses do
-    resources :bookings
+    resources :bookings, except: [:destroy]
   end
+  resources :bookings, only: [:destroy]
   resources :bookings, only: [] do
     resources :reviews, only: [ :new, :create ]
   end
