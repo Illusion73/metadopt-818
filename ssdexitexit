@@ -1,0 +1,135 @@
+=> [[32m#<Metaverse:0x00007fed20223a98[0m
+  id: [1;34m1[0m,
+  title: [31m[1;31m"[0m[31mtop meta[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.[1;31m"[0m[31m[0m,
+  price: [1;34m700[0m,
+  user_id: [1;34m12[0m,
+  created_at: [1;34;4mTue[0m, [1;34m22[0m [1;34;4mFeb[0m [1;34m2022[0m [1;34m09[0m:[1;34m22[0m:[1;35m55.298306000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m22[0m [1;34;4mFeb[0m [1;34m2022[0m [1;34m09[0m:[1;34m22[0m:[1;35m55.298306000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Metaverse:0x00007fed20253c70[0m
+  id: [1;34m2[0m,
+  title: [31m[1;31m"[0m[31mSouthern Texas College[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.[1;31m"[0m[31m[0m,
+  price: [1;34m906[0m,
+  user_id: [1;34m13[0m,
+  created_at: [1;34;4mTue[0m, [1;34m22[0m [1;34;4mFeb[0m [1;34m2022[0m [1;34m09[0m:[1;34m22[0m:[1;35m55.951054000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m22[0m [1;34;4mFeb[0m [1;34m2022[0m [1;34m09[0m:[1;34m22[0m:[1;35m55.951054000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Metaverse:0x00007fed20253ba8[0m
+  id: [1;34m3[0m,
+  title: [31m[1;31m"[0m[31mNorthern Montana University[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.[1;31m"[0m[31m[0m,
+  price: [1;34m1466[0m,
+  user_id: [1;34m13[0m,
+  created_at: [1;34;4mTue[0m, [1;34m22[0m [1;34;4mFeb[0m [1;34m2022[0m [1;34m09[0m:[1;34m22[0m:[1;35m55.958423000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m22[0m [1;34;4mFeb[0m [1;34m2022[0m [1;34m09[0m:[1;34m22[0m:[1;35m55.958423000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Metaverse:0x00007fed20253ae0[0m
+  id: [1;34m4[0m,
+  title: [31m[1;31m"[0m[31mEast Bechtelar[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.[1;31m"[0m[31m[0m,
+  price: [1;34m679[0m,
+  user_id: [1;34m13[0m,
+  created_at: [1;34;4mTue[0m, [1;34m22[0m [1;34;4mFeb[0m [1;34m2022[0m [1;34m09[0m:[1;34m22[0m:[1;35m55.964900000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m22[0m [1;34;4mFeb[0m [1;34m2022[0m [1;34m09[0m:[1;34m22[0m:[1;35m55.964900000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Metaverse:0x00007fed20253a18[0m
+  id: [1;34m5[0m,
+  title: [31m[1;31m"[0m[31mWilliamson College[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.[1;31m"[0m[31m[0m,
+  price: [1;34m892[0m,
+  user_id: [1;34m14[0m,
+  created_at: [1;34;4mTue[0m, [1;34m22[0m [1;34;4mFeb[0m [1;34m2022[0m [1;34m09[0m:[1;34m22[0m:[1;35m56.227604000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m22[0m [1;34;4mFeb[0m [1;34m2022[0m [1;34m09[0m:[1;34m22[0m:[1;35m56.227604000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Metaverse:0x00007fed20253950[0m
+  id: [1;34m6[0m,
+  title: [31m[1;31m"[0m[31mSouth Kertzmann[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.[1;31m"[0m[31m[0m,
+  price: [1;34m981[0m,
+  user_id: [1;34m14[0m,
+  created_at: [1;34;4mTue[0m, [1;34m22[0m [1;34;4mFeb[0m [1;34m2022[0m [1;34m09[0m:[1;34m22[0m:[1;35m56.236852000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m22[0m [1;34;4mFeb[0m [1;34m2022[0m [1;34m09[0m:[1;34m22[0m:[1;35m56.236852000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Metaverse:0x00007fed20253888[0m
+  id: [1;34m7[0m,
+  title: [31m[1;31m"[0m[31mWestern Pfannerstill Institute[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.[1;31m"[0m[31m[0m,
+  price: [1;34m693[0m,
+  user_id: [1;34m14[0m,
+  created_at: [1;34;4mTue[0m, [1;34m22[0m [1;34;4mFeb[0m [1;34m2022[0m [1;34m09[0m:[1;34m22[0m:[1;35m56.243136000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m22[0m [1;34;4mFeb[0m [1;34m2022[0m [1;34m09[0m:[1;34m22[0m:[1;35m56.243136000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Metaverse:0x00007fed202537c0[0m
+  id: [1;34m8[0m,
+  title: [31m[1;31m"[0m[31mSouth Gottlieb College[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.[1;31m"[0m[31m[0m,
+  price: [1;34m703[0m,
+  user_id: [1;34m15[0m,
+  created_at: [1;34;4mTue[0m, [1;34m22[0m [1;34;4mFeb[0m [1;34m2022[0m [1;34m09[0m:[1;34m22[0m:[1;35m56.502820000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m22[0m [1;34;4mFeb[0m [1;34m2022[0m [1;34m09[0m:[1;34m22[0m:[1;35m56.502820000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Metaverse:0x00007fed202536f8[0m
+  id: [1;34m9[0m,
+  title: [31m[1;31m"[0m[31mEast Hawaii Institute[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.[1;31m"[0m[31m[0m,
+  price: [1;34m1281[0m,
+  user_id: [1;34m15[0m,
+  created_at: [1;34;4mTue[0m, [1;34m22[0m [1;34;4mFeb[0m [1;34m2022[0m [1;34m09[0m:[1;34m22[0m:[1;35m56.510022000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m22[0m [1;34;4mFeb[0m [1;34m2022[0m [1;34m09[0m:[1;34m22[0m:[1;35m56.510022000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Metaverse:0x00007fed20253630[0m
+  id: [1;34m10[0m,
+  title: [31m[1;31m"[0m[31mEast Swaniawski[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.[1;31m"[0m[31m[0m,
+  price: [1;34m1267[0m,
+  user_id: [1;34m15[0m,
+  created_at: [1;34;4mTue[0m, [1;34m22[0m [1;34;4mFeb[0m [1;34m2022[0m [1;34m09[0m:[1;34m22[0m:[1;35m56.516629000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m22[0m [1;34;4mFeb[0m [1;34m2022[0m [1;34m09[0m:[1;34m22[0m:[1;35m56.516629000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Metaverse:0x00007fed20253568[0m
+  id: [1;34m11[0m,
+  title: [31m[1;31m"[0m[31mAnkunding University[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.[1;31m"[0m[31m[0m,
+  price: [1;34m884[0m,
+  user_id: [1;34m16[0m,
+  created_at: [1;34;4mTue[0m, [1;34m22[0m [1;34;4mFeb[0m [1;34m2022[0m [1;34m09[0m:[1;34m22[0m:[1;35m56.784650000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m22[0m [1;34;4mFeb[0m [1;34m2022[0m [1;34m09[0m:[1;34m22[0m:[1;35m56.784650000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Metaverse:0x00007fed202534a0[0m
+  id: [1;34m12[0m,
+  title: [31m[1;31m"[0m[31mThe Wyoming University[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.[1;31m"[0m[31m[0m,
+  price: [1;34m794[0m,
+  user_id: [1;34m16[0m,
+  created_at: [1;34;4mTue[0m, [1;34m22[0m [1;34;4mFeb[0m [1;34m2022[0m [1;34m09[0m:[1;34m22[0m:[1;35m56.792134000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m22[0m [1;34;4mFeb[0m [1;34m2022[0m [1;34m09[0m:[1;34m22[0m:[1;35m56.792134000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Metaverse:0x00007fed202533d8[0m
+  id: [1;34m13[0m,
+  title: [31m[1;31m"[0m[31mNorth Pfeffer Institute[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.[1;31m"[0m[31m[0m,
+  price: [1;34m1091[0m,
+  user_id: [1;34m17[0m,
+  created_at: [1;34;4mTue[0m, [1;34m22[0m [1;34;4mFeb[0m [1;34m2022[0m [1;34m09[0m:[1;34m22[0m:[1;35m57.052422000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m22[0m [1;34;4mFeb[0m [1;34m2022[0m [1;34m09[0m:[1;34m22[0m:[1;35m57.052422000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Metaverse:0x00007fed20253310[0m
+  id: [1;34m14[0m,
+  title: [31m[1;31m"[0m[31mSchneider University[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.[1;31m"[0m[31m[0m,
+  price: [1;34m1500[0m,
+  user_id: [1;34m18[0m,
+  created_at: [1;34;4mTue[0m, [1;34m22[0m [1;34;4mFeb[0m [1;34m2022[0m [1;34m09[0m:[1;34m22[0m:[1;35m57.318856000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m22[0m [1;34;4mFeb[0m [1;34m2022[0m [1;34m09[0m:[1;34m22[0m:[1;35m57.318856000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<Metaverse:0x00007fed20253248[0m
+  id: [1;34m15[0m,
+  title: [31m[1;31m"[0m[31mEastern Koch[1;31m"[0m[31m[0m,
+  description:
+   [31m[1;31m"[0m[31mLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.[1;31m"[0m[31m[0m,
+  price: [1;34m1109[0m,
+  user_id: [1;34m18[0m,
+  created_at: [1;34;4mTue[0m, [1;34m22[0m [1;34;4mFeb[0m [1;34m2022[0m [1;34m09[0m:[1;34m22[0m:[1;35m57.325765000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at: [1;34;4mTue[0m, [1;34m22[0m [1;34;4mFeb[0m [1;34m2022[0m [1;34m09[0m:[1;34m22[0m:[1;35m57.325765000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m]
