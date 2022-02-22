@@ -5,7 +5,7 @@ class MetaversesController < ApplicationController
   def index
     @metaverses = Metaverse.all
   end
-  
+
   def show
   end
 
@@ -28,6 +28,13 @@ class MetaversesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @metaverse = Metaverse.find(params[:id])
+    @metaverse.destroy
+
+    redirect_to metaverses_path
   end
 
   private
