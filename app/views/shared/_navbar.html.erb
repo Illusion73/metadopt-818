@@ -7,7 +7,7 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link active" href="/">Home</a>
                 </li>
                 <li class="nav-item">
                     <%# <a class="nav-link" href="#">Explore</a> %>
@@ -22,9 +22,15 @@
                     <%# <%= link_to "", new_metaverse_path, class: "nav-link" %> %>
                 </li>
             </ul>
-            <div class="d-flex">
-                <button class="btn btn-success ms-3"><%= link_to "my account", metaverses_path %></button>
+            <% if user_signed_in? %>
+             <div class="d-flex">
+                <button class="btn btn-success ms-3"><%= link_to "my account", user_path(current_user)%></button>
             </div>
+            <%else %>
+            <div class="d-flex">
+                <button class="btn btn-success ms-3"><%= link_to "Login", new_user_session_path %></button>
+            </div>
+            <%end %>
         </div>
     </div>
 </nav>
