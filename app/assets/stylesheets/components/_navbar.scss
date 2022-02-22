@@ -10,3 +10,40 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.nav-link {
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    bottom: -2px;
+    margin-top: -0.5px;
+    background: #fff;
+  }
+
+  &:before {
+    left: -2.5px;
+  }
+
+  &:after {
+    right: 2.5px;
+    background: #fff;
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+
+  &:hover {
+    &:before {
+      background: #fff;
+      width: 100%;
+      transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+
+    &:after {
+      background: transparent;
+      width: 100%;
+      transition: 0s;
+    }
+  }
+}

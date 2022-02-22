@@ -1,12 +1,13 @@
 class MetaversesController < ApplicationController
 
-  before_action :find_by_id, only: [:edit, :update, :show]
+  before_action :set_metaverse, only: [:edit, :update, :show]
 
   def index
     @metaverses = Metaverse.all
   end
 
   def show
+    @reviews = @metaverse.reviews
   end
 
   def edit
@@ -44,7 +45,7 @@ class MetaversesController < ApplicationController
       params.require(:metaverse).permit(:title, :description, :price, :principal_picture)
     end
 
-    def find_by_id
+    def set_metaverse
       @metaverse = Metaverse.find(params[:id])
     end
 
