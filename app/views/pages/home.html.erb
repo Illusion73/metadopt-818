@@ -1,6 +1,10 @@
 <header>
-  <h1>Metadopt</h1>
-  <p>Explore new fantasies and free yourself</p>
-  <a href="#" class="btn-book">Start Booking</a>
+  <%= render "shared/navbar" %>
+  <section class="hero">
+    <h1 class="hero-title">Metadopt</h1>
+    <p class="hero-description">Explore new fantasies and free yourself</p>
+    <%= link_to "Start booking", metaverses_path, class: "btn-book" %>
+    <%# <a href="#" class="btn-book">Start Booking</a> %>
+  </section>
 
 </header>
