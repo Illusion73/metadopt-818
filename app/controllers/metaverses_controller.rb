@@ -41,7 +41,7 @@ class MetaversesController < ApplicationController
 
   private
     def metaverse_params
-      params.require(:metaverse).permit(:title, :description, :price)
+      params.require(:metaverse).permit(:title, :description, :price, :principal_picture)
     end
 
     def find_by_id
