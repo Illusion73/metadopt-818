@@ -5,10 +5,9 @@ class MetaversesController < ApplicationController
   def index
     @metaverses = Metaverse.all
   end
-
+  
   def show
   end
-
 
   def edit
   end
@@ -23,11 +22,11 @@ class MetaversesController < ApplicationController
   end
 
   def create
-   @metaverse = Metaverse.new(metaverse_params)
-   if @metaverse.save
-     redirect_to metaverse_path(@metaverse)
+    @metaverse = Metaverse.new(metaverse_params)
+    if @metaverse.save
+      redirect_to metaverse_path(@metaverse)
     else
-     render :new
+      render :new
     end
   end
 
