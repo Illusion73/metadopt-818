@@ -24,10 +24,9 @@
               <div class="col-4">
                 <img class="card-img-top" src="<%= booking.metaverse.principal_picture %>" alt="Card image cap">
                 <div class="card-body">
-                  <h5 class="card-title"> <%= link_to booking.metaverse.title, metaverse_path(booking.metaverse) %></h5>
+                  <h5 class="card-title"> <%= link_to booking.metaverse.title, metaverse_booking_path(booking.metaverse.id,booking) %></h5>
                   <p> start : <%= booking.start_at %></p>
                   <p>end : <%= booking.end_at %></p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
               </div>
             <%end  %>

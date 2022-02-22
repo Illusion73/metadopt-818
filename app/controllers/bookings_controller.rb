@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :destroy, :edit, :update]
-  before_action :set_metaverse, only: [:new, :create, :edit, :update]
+  before_action :set_metaverse, only: [:show, :new, :create, :edit, :update]
 
   def new
     @booking = Booking.new
@@ -42,12 +42,12 @@ class BookingsController < ApplicationController
     end
 
     def set_booking
-      id = params[:id] || params[:booking_id]
+      id = params[:booking_id] || params[:id]
       @booking = Booking.find(id)
     end
 
     def set_metaverse
-      id = params[:id] || params[:metaverse_id]
+      id = params[:metaverse_id] || params[:id]
       @metaverse = Metaverse.find(id)
     end
 end
