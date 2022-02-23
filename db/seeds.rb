@@ -21,7 +21,7 @@ user1 = User.new(
   last_name: "Meta",
   password: "azertyu"
 )
-user.save!
+user1.save!
 
 user2 = User.new(
   email: "josephine@meta.fr",
@@ -29,7 +29,7 @@ user2 = User.new(
   last_name: "Meta",
   password: "azertyu"
 )
-user.save!
+user2.save!
 
 user3 = User.new(
   email: "toufik@meta.fr",
@@ -37,7 +37,7 @@ user3 = User.new(
   last_name: "Meta",
   password: "azertyu"
 )
-user.save!
+user3.save!
 
 user4 = User.new(
   email: "momo@meta.fr",
@@ -45,7 +45,7 @@ user4 = User.new(
   last_name: "Meta",
   password: "azertyu"
 )
-user.save!
+user4.save!
 
 puts 'users created !'
 
