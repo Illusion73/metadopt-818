@@ -1,25 +1,31 @@
-<div class="container">
-  <div>
-    <h1>Show</h1>
+<div class="container my-5 w-75">
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @metaverse.principal_picture %>)">
+  <%= @metaverse.title %>
   </div>
 
   <div class="card-trip">
-    <%if @metaverse.principal_picture.attached? %>
-    <%= cl_image_tag @metaverse.principal_picture.key, crop: :fill, class: "card-category"  %>
-    <%else %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://stylistme.com/wp-content/uploads/2022/02/Metaverse-guide-tuto.png)">
-    </div>
-    <%end %>
+    <% if @metaverse.principal_picture.attached? %>
+      <%= cl_image_tag @metaverse.principal_picture.key, crop: :fill, class: "card-category"  %>
+    <% else %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://stylistme.com/wp-content/uploads/2022/02/Metaverse-guide-tuto.png)"></div>
+    <% end %>
     <div class="card-trip-infos">
       <div>
-        <h2><%= @metaverse.title %></h2>
-        <p><%= @metaverse.description %></p>
+        <div class="show-description">
+          <p><%= @metaverse.description %></p>
+        </div>
+        <div class="show-reviews">
+          <p><strong>TODO : display reviews</strong></p>
+        </div>
       </div>
-      <h2 class="card-trip-pricing"><%= @metaverse.price %> € / jour</h2>
     </div>
-    <%= link_to "Book it", new_metaverse_booking_path(@metaverse)%>
   </div>
 
-  <%= link_to "Back to all Metaverses", metaverses_path, class: "btn btn-primary"%>
+  <div class="mt-4">
+  <h3 class="card-trip-pricing">€ <%= @metaverse.price %> / jour</h3>
+  <%= link_to "Book it", new_metaverse_booking_path(@metaverse), class: "btn btn-primary"%>
+  <%= link_to "Back to all Metaverses", metaverses_path, class: "btn btn-warning"%>
+  </div>
 
 </div>
