@@ -1,8 +1,11 @@
 <div class="container">
 
   <h1>My booking</h1>
-
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @booking.metaverse.principal_picture %>)">
+<% if @booking.metaverse.pictures.attached? %>
+  <%= cl_image_tag @booking.metaverse.pictures[0].key, crop: :fill, class: "card-category rounded-top", alt: "principal metaverse picture"  %>
+<% else %>
+  <img class="card-category rounded-top" src="https://stylistme.com/wp-content/uploads/2022/02/Metaverse-guide-tuto.png" alt="principal metaverse picture">
+<% end %>
   <%= @booking.metaverse.title %> booked, start the experience !
   </div>
 
