@@ -10,8 +10,9 @@
   <% end %>
 </div>
 <div class="container">
-  <div class="grid grid--3-cols grid-margin-bottom">
+  <div class="grid grid--2-cols grid-margin-bottom">
     <% @metaverses.each do |metaverse| %>
+      <div class="card-meta-index">
         <%= link_to metaverse_path(metaverse)  do %>
             <div class="card" style="width:100%;">
               <% if metaverse.principal_picture.attached? %>
@@ -19,13 +20,15 @@
               <% else %>
                 <img class="card-img-top rounded-top" src="https://stylistme.com/wp-content/uploads/2022/02/Metaverse-guide-tuto.png" alt="principal metaverse picture">
               <% end %>
-              <div class="card-body">
-                <h5 class="card-title"><%= metaverse.title %></h5>
-                <p class="card-text"><%= metaverse.price %>€</p>
-                <span class="badge bg-warning"><%= metaverse.category %></span>
+              <div class="body">
+                <h5><%= metaverse.title %></h5>
+                <p><%= metaverse.price %>€</p>
+                <span class="badge bg-warning category"><%= metaverse.category %></span>
+                <p class="description"><%= metaverse.description %></p>
               </div>
             </div>
         <% end %>
+      </div>
     <%end%>
   </div>
 </div>
