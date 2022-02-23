@@ -16,11 +16,17 @@
       </div>
     </div>
   </div>
-
-  <div class="mt-4">
-  <h3 class="card-trip-pricing">€ <%= @metaverse.price %> / jour</h3>
-  <%= link_to "Book it", new_metaverse_booking_path(@metaverse), class: "btn btn-primary"%>
-  <%= link_to "Back to all Metaverses", metaverses_path, class: "btn btn-warning"%>
+  <div class="reviews my-3">
+    <% @metaverse.reviews.each do |review| %>
+      <%= review.user.first_name %>
+      <%= review.content %>
+      <%= review.rating %>
+    <% end %>
+    <div class="mt-4">
+      <h3 class="card-trip-pricing">€ <%= @metaverse.price %> / jour</h3>
+      <%= link_to "Book it", new_metaverse_booking_path(@metaverse), class: "btn btn-primary"%>
+      <%= link_to "Back to all Metaverses", metaverses_path, class: "btn btn-warning"%>
+    </div>
   </div>
 
 </div>
