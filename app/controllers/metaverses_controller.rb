@@ -47,7 +47,12 @@ class MetaversesController < ApplicationController
 
   private
     def metaverse_params
-      params.require(:metaverse).permit(:title, :description, :price, :principal_picture, pictures: [], :category)
+      params.require(:metaverse).permit(:title,
+                                        :description,
+                                        :price,
+                                        :principal_picture,
+                                        :category,
+                                        pictures: [])
     end
 
     def set_metaverse
