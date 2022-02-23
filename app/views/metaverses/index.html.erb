@@ -1,7 +1,14 @@
-<h1>Welcome to the app/views/metaverses/index </h1>
-
-
-
+<h1>Discover all metaverses you can booked ! </h1>
+<div class="search-bar">
+  <%= form_tag metaverses_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a metaverse"
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
+</div>
 <div class="container">
   <div class="row">
     <% @metaverses.each do |metaverse| %>
@@ -15,6 +22,7 @@
               <div class="card-body">
                 <h5 class="card-title"><%= metaverse.title %></h5>
                 <p class="card-text"><%= metaverse.price %>€</p>
+                <span class="badge bg-warning"><%= metaverse.category %></span>
               </div>
             </div>
         <% end %>

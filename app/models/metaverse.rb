@@ -6,6 +6,10 @@ class Metaverse < ApplicationRecord
 
   validates :title, presence: true
   validates :price, presence: true
+  validates :category, presence: true, inclusion: {
+    in: ["history", "future", "fantasy"],
+    message: "it's is not a valid category"
+  }
 
   has_one_attached :principal_picture
 end

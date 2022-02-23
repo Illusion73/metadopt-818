@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_02_23_103851) do
+ActiveRecord::Schema.define(version: 2022_02_23_134122) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 2022_02_23_103851) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "principal_picture", default: "https://stylistme.com/wp-content/uploads/2022/02/Metaverse-guide-tuto.png"
+    t.string "category"
     t.index ["user_id"], name: "index_metaverses_on_user_id"
   end
 
