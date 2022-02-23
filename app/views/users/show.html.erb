@@ -1,57 +1,54 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
-
 <div class="container">
 
-<p>Welcome to your profil page <%= @user.first_name %> </p>
+<h2 class="text-center mt-3 mb-3">Welcome to your profil page <strong><%= @user.first_name %></strong> !</h2>
 
 <div class="accordion" id="accordionExample">
   <div class="accordion-item">
-    <h2 class="accordion-header" id="headingOne">
+    <h3 class="accordion-header" id="headingOne">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
         Your bookings
       </button>
-    </h2>
+    </h3>
     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
       <div class="accordion-body">
         <div class="container">
-          <div class="row">
+          <div class="grid-card-user">
             <% @bookings.each do |booking| %>
-              <%= link_to metaverse_booking_path(booking.metaverse.id,booking), class: "button col-4 mb-5 " do %>
-
-                  <img class="card-img-top " src=<%= booking.metaverse.principal_picture %> alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title"> <%= booking.metaverse.title %></h5>
-                    <p> start : <%= booking.start_at %></p>
-                    <p>end : <%= booking.end_at %></p>
-                  </div>
-              <%end %>
-
-            <%end  %>
+              <div class="card-user-booking">
+                <%= link_to metaverse_booking_path(booking.metaverse.id,booking) do %>
+                    <img class="image" src=<%= booking.metaverse.principal_picture %> alt="Card image cap">
+                    <div class="body">
+                      <h5><%= booking.metaverse.title %></h5>
+                      <p> From <%= booking.start_at %></p>
+                      <p> To <%= booking.end_at %></p>
+                    </div>
+                <% end %>
+              </div>
+            <% end %>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div class="accordion-item">
-    <h2 class="accordion-header" id="headingTwo">
+    <h3 class="accordion-header" id="headingTwo">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
         Your metaverses
       </button>
-    </h2>
+    </h3>
     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
       <div class="accordion-body">
         <div class="container">
-                  <div class="row">
+          <div class="grid-card-user">
             <% @metaverses.each do |metaverse| %>
-               <%= link_to metaverse_path(metaverse), class: "button col-4 mb-5 " do %>
-
-                  <img class="card-img-top" src="<%= metaverse.principal_picture %>" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title"> <%=  metaverse.title %></h5>
-                  </div>
-
-              <%end  %>
+              <div class="card-user-booking">
+                <%= link_to metaverse_path(metaverse) do %>
+                    <img class="image" src="<%= metaverse.principal_picture %>" alt="Card image cap">
+                    <div class="body">
+                      <h5> <%=  metaverse.title %></h5>
+                    </div>
+                <%end  %>
+              </div>
             <%end  %>
           </div>
         </div>
@@ -59,26 +56,27 @@
     </div>
   </div>
   <div class="accordion-item">
-    <h2 class="accordion-header" id="headingThree">
+    <h3 class="accordion-header" id="headingThree">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
         Your booked metaverses
       </button>
-    </h2>
+    </h3>
     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
       <div class="accordion-body">
         <div class="container">
-          <div class="row">
+          <div class="grid-card-user">
             <% @owner_booked_metaverses.each do |booking| %>
-               <%= link_to metaverse_path(booking.metaverse), class: "button col-4 mb-5 " do %>
+              <div class="card-user-booking">
+                <%= link_to metaverse_path(booking.metaverse) do %>
 
-                  <img class="card-img-top" src="<%= booking.metaverse.principal_picture %>" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title"> <%=booking.metaverse.title %></h5>
-                    <p>start : <%= booking.start_at %></p>
-                    <p>start : <%= booking.end_at %></p>
-                  </div>
-
-              <%end  %>
+                    <img class="image" src="<%= booking.metaverse.principal_picture %>" alt="Card image cap">
+                    <div class="body">
+                      <h5> <%=booking.metaverse.title %></h5>
+                      <p>From <%= booking.start_at %></p>
+                      <p>To <%= booking.end_at %></p>
+                    </div>
+                <%end  %>
+              </div>
             <%end  %>
           </div>
         </div>
