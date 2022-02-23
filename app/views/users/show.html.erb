@@ -12,7 +12,7 @@
     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
       <div class="accordion-body">
         <div class="container">
-          <div class="grid-card-user">
+          <div class="grid grid--4-cols">
             <% @bookings.each do |booking| %>
               <div class="card-user-booking">
                 <%= link_to metaverse_booking_path(booking.metaverse.id,booking) do %>
@@ -39,7 +39,7 @@
     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
       <div class="accordion-body">
         <div class="container">
-          <div class="grid-card-user">
+          <div class="grid grid--4-cols">
             <% @metaverses.each do |metaverse| %>
               <div class="card-user-booking">
                 <%= link_to metaverse_path(metaverse) do %>
@@ -64,7 +64,7 @@
     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
       <div class="accordion-body">
         <div class="container">
-          <div class="grid-card-user">
+          <div class="grid grid--4-cols">
             <% @owner_booked_metaverses.each do |booking| %>
               <div class="card-user-booking">
                 <%= link_to metaverse_path(booking.metaverse) do %>
