@@ -16,12 +16,12 @@
             <% @bookings.each do |booking| %>
               <div class="card-user-booking">
                 <%= link_to metaverse_booking_path(booking.metaverse.id,booking) do %>
-                    <img class="image" src=<%= booking.metaverse.principal_picture %> alt="Card image cap">
-                    <div class="body">
-                      <h5><%= booking.metaverse.title %></h5>
-                      <p> From <%= booking.start_at %></p>
-                      <p> To <%= booking.end_at %></p>
-                    </div>
+                  <img class="image" src=<%= booking.metaverse.principal_picture %> alt="Card image cap">
+                  <div class="body">
+                    <h5><%= booking.metaverse.title %></h5>
+                    <p> From <%= booking.start_at %></p>
+                    <p> To <%= booking.end_at %></p>
+                  </div>
                 <% end %>
               </div>
             <% end %>

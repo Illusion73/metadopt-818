@@ -7,8 +7,8 @@
     <% @metaverses.each do |metaverse| %>
         <%= link_to metaverse_path(metaverse), class: "button col-4 mb-5 " do %>
             <div class="card" style="width:100%;">
-              <% if metaverse.principal_picture.attached? %>
-                <%= cl_image_tag metaverse.principal_picture.key, crop: :fill, class: "card-img-top rounded-top", alt: "principal metaverse picture"  %>
+              <% if metaverse.pictures.attached? %>
+                <%= cl_image_tag metaverse.pictures[0].key, crop: :fill, class: "card-img-top rounded-top", alt: "principal metaverse picture"  %>
               <% else %>
                 <img class="card-img-top rounded-top" src="https://stylistme.com/wp-content/uploads/2022/02/Metaverse-guide-tuto.png" alt="principal metaverse picture">
               <% end %>
