@@ -109,4 +109,33 @@ meta6.save!
 
 puts 'Metaverses created !'
 
+puts "Creating Bookings"
+booking1 = Booking.create(
+  start_at: Date.today - 2,
+  end_at: Date.today - 2,
+  user: user3,
+  metaverse: meta1
+)
+
+booking2 = Booking.create(
+  start_at: Date.today - 1,
+  end_at: Date.today - 1,
+  user: user3,
+  metaverse: meta1
+)
+
+booking3 = Booking.create(
+  start_at: Date.today + 1,
+  end_at: Date.today + 1,
+  user: user3,
+  metaverse: meta1
+)
+
+
+review1 =Review.create(
+  content: "toto",
+  rating: 3,
+  user: user3,
+  booking: booking1
+)
 p 'data has been created'
