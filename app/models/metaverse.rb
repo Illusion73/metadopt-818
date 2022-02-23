@@ -11,5 +11,5 @@ class Metaverse < ApplicationRecord
     message: "it's is not a valid category"
   }
 
-  has_one_attached :principal_picture
+  has_many_attached :pictures
 end

@@ -1,12 +1,29 @@
 <div class="container my-5 w-75">
 
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= @metaverse.principal_picture %>)">
-  <%= @metaverse.title %>
-  </div>
 
   <div class="card-trip">
-    <% if @metaverse.principal_picture.attached? %>
-      <%= cl_image_tag @metaverse.principal_picture.key, crop: :fill, class: "card-category"  %>
+    <% if @metaverse.pictures.attached? %>
+      <%#= cl_image_tag @metaverse.pictures[0].key, crop: :fill, class: "card-category"  %>
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <%= cl_image_tag @metaverse.pictures[0].key, crop: :fill, class: "d-block w-100"  %>
+            </div>
+            <% @metaverse.pictures[1..-1].each do |picture| %>
+              <div class="carousel-item">
+                <%= cl_image_tag picture.key, crop: :fill, class: "d-block w-100"  %>
+              </div>
+            <%end %>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
     <% else %>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://stylistme.com/wp-content/uploads/2022/02/Metaverse-guide-tuto.png)"></div>
     <% end %>
@@ -34,5 +51,29 @@
       <%= link_to "Back to all Metaverses", metaverses_path, class: "btn btn-warning"%>
     </div>
   </div>
-
 </div>
+
+
+
+<% if @metaverse.pictures.attached? %>
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <%= cl_image_tag @metaverse.pictures[0].key, crop: :fill, class: "d-block w-100 center"  %>
+      </div>
+      <% @metaverse.pictures[1..-1].each do |picture| %>
+        <div class="carousel-item">
+          <%= cl_image_tag picture.key, crop: :fill, class: "d-block w-100 center"  %>
+        </div>
+      <%end %>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+<%end %>
