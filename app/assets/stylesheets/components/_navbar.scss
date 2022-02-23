@@ -1,49 +1,21 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
-}
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
+// NAVBAR
+// Hover effect left to right on links
+.logo {
   width: 40px;
+  height: 40px;
 }
-
 .nav-link {
-  &:before,
   &:after {
     content: "";
-    position: absolute;
-    width: 0%;
-    height: 4px;
-    bottom: -2px;
-    margin-top: -0.5px;
-    background: #fff;
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fca311;
+    transition: width 0.3s;
   }
 
-  &:before {
-    left: -2.5px;
-  }
-
-  &:after {
-    right: 2.5px;
-    background: #fff;
-    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
-  }
-
-  &:hover {
-    &:before {
-      background: #fff;
-      width: 100%;
-      transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
-    }
-
-    &:after {
-      background: transparent;
-      width: 100%;
-      transition: 0s;
-    }
+  &:hover::after {
+    width: 100%;
+    transition: width 0.3s;
   }
 }
