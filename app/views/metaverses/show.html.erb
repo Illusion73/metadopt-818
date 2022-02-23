@@ -4,7 +4,12 @@
   </div>
 
   <div class="card-trip">
-    <img src=  <%= @metaverse.principal_picture%> />
+    <%if @metaverse.principal_picture.attached? %>
+    <%= cl_image_tag @metaverse.principal_picture.key, crop: :fill, class: "card-category"  %>
+    <%else %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://stylistme.com/wp-content/uploads/2022/02/Metaverse-guide-tuto.png)">
+    </div>
+    <%end %>
     <div class="card-trip-infos">
       <div>
         <h2><%= @metaverse.title %></h2>

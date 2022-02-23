@@ -6,4 +6,6 @@ class Metaverse < ApplicationRecord
 
   validates :title, presence: true
   validates :price, presence: true
+
+  has_one_attached :principal_picture
 end
