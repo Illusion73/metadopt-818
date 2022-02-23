@@ -3,7 +3,12 @@ class MetaversesController < ApplicationController
   before_action :set_metaverse, only: [:edit, :update, :show]
 
   def index
-    @metaverses = Metaverse.all
+    if params[:query].present?
+      sql_query = "title ILIKE :query OR category ILIKE :query"
+      @metaverses = Metaverse.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @metaverses = Metaverse.all
+    end
   end
 
   def show
@@ -42,7 +47,7 @@ class MetaversesController < ApplicationController
 
   private
     def metaverse_params
-      params.require(:metaverse).permit(:title, :description, :price, :principal_picture, pictures: [])
+      params.require(:metaverse).permit(:title, :description, :price, :principal_picture, pictures: [], :category)
     end
 
     def set_metaverse

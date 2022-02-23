@@ -1,23 +1,34 @@
-<h1>Welcome to the app/views/metaverses/index </h1>
-
-
-
+<h1 class="container text-center my-4 border-bottom pb-4">Visit our metaverses</h1>
+<div class="search-bar">
+  <%= form_tag metaverses_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a metaverse"
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
+</div>
 <div class="container">
-  <div class="row">
+  <div class="grid grid--2-cols grid-margin-bottom">
     <% @metaverses.each do |metaverse| %>
-        <%= link_to metaverse_path(metaverse), class: "button col-4 mb-5 " do %>
+      <div class="card-meta-index">
+        <%= link_to metaverse_path(metaverse)  do %>
             <div class="card" style="width:100%;">
               <% if metaverse.pictures.attached? %>
                 <%= cl_image_tag metaverse.pictures[0].key, crop: :fill, class: "card-img-top rounded-top", alt: "principal metaverse picture"  %>
               <% else %>
                 <img class="card-img-top rounded-top" src="https://stylistme.com/wp-content/uploads/2022/02/Metaverse-guide-tuto.png" alt="principal metaverse picture">
               <% end %>
-              <div class="card-body">
-                <h5 class="card-title"><%= metaverse.title %></h5>
-                <p class="card-text"><%= metaverse.price %>€</p>
+              <div class="body">
+                <h5><%= metaverse.title %></h5>
+                <p><%= metaverse.price %>€</p>
+                <span class="badge bg-warning category"><%= metaverse.category %></span>
+                <p class="description"><%= metaverse.description %></p>
               </div>
             </div>
         <% end %>
+      </div>
     <%end%>
   </div>
 </div>

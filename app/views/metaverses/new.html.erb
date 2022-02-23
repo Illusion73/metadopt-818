@@ -7,6 +7,7 @@
       <%= f.input :description %>
       <%= f.input :price %>
       <%= f.input :pictures, as: :file, input_html: { multiple: true } %>
+      <%= f.input :category, collection: ["history", "future", "fantasy"] %>
       <%= f.submit %>
   <% end %>
   <br>
