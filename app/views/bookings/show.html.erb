@@ -18,8 +18,16 @@
       </ul>
     </div>
 
-    <div class="text-center mb-5">
-      <%= link_to "Edit this booking", edit_metaverse_booking_path([@metaverse, @booking]), class: "btn btn-success rounded text-dark mx-1" %>
-      <%= link_to "Delete this booking", booking_path(@booking), method: :delete, class: "btn btn-warning rounded text-dark mx-1"  %>
-    </div>
- </div>
+
+  <p><strong>Booking details</strong></p>
+  <ul>
+    <li>Arrival : <%= @booking.start_at %></li>
+    <li>Departure : <%= @booking.end_at %></li>
+    <li><%= @booking.metaverse.description %></li>
+  </ul>
+
+<%= link_to "Edit", edit_metaverse_booking_path([@metaverse, @booking]), class: "btn btn-success" %>
+<%= link_to "Delete", booking_path(@booking), method: :delete, class: "btn btn-danger" %>
+
+</div>
+

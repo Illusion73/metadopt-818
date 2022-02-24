@@ -21,7 +21,7 @@
             <% if user_signed_in? %>
 
               <div class="dropdown">
-                <a class="btn btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="btn btn-outline-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                   My account
                 </a>
 
@@ -31,7 +31,7 @@
                 </ul>
               </div>
             <%else %>
-                <%= link_to "Login", new_user_session_path, class: "btn btn-success ms-3" %>
+                <%= link_to "Login", new_user_session_path, class: "btn btn-outline-light ms-3" %>
             <%end %>
             </div>
         </div>

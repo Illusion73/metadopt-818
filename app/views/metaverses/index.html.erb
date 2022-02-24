@@ -1,14 +1,14 @@
 <h1 class="container text-center mt-4 border-bottom pb-4">Explore our metaverses</h1>
-<div class="search-bar mx-auto mb-3" style="width:60vw;">
-  <%= form_tag metaverses_path, method: :get do %>
+<%= form_tag metaverses_path, method: :get do %>
+  <div class="input-group">
     <%= text_field_tag :query,
       params[:query],
-      class: "form-control text-center",
+      class: "form-control",
       placeholder: "Find a metaverse"
     %>
-    <%= submit_tag "Search", class: "btn btn-primary mt-3" %>
-  <% end %>
-</div>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  </div>
+<% end %>
 
 
 <div class="container">
