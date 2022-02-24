@@ -19,15 +19,9 @@
               <% if metaverse.pictures.attached? %>
                 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                   <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval=<%= rand(2700..3000) %>>
-
+                    <div class="carousel-item active">
                       <%= cl_image_tag metaverse.pictures[0].key, crop: :fill, class: "d-block w-100"  %>
                     </div>
-                    <% metaverse.pictures[1..2].each do |picture| %>
-                      <div class="carousel-item" data-bs-interval=<%= rand(2700..3000) %>>
-                        <%= cl_image_tag picture.key, crop: :fill, class: "d-block w-100"  %>
-                      </div>
-                    <%end %>
                   </div>
                 </div>
               <% else %>

@@ -1,13 +1,22 @@
-<div class="container">
+ <div class="container">
+  <div class="mb-4">
+      <h1 class="text-center my-4 pb-3 border-bottom">My booking</h1>
+    <% if @booking.metaverse.pictures.attached? %>
+      <%= cl_image_tag @booking.metaverse.pictures[0].key, crop: :fill, class: "mb-2 w-100", alt: "principal metaverse picture"  %>
+    <% else %>
+      <img class="mb-2" src="https://stylistme.com/wp-content/uploads/2022/02/Metaverse-guide-tuto.png" alt="principal metaverse picture">
+    <% end %>
+      <p class="text-center text-muted mb-4"><%= @booking.metaverse.title %> booked, start the experience !</p>
+    </div>
 
-  <h1>My booking</h1>
-<% if @booking.metaverse.pictures.attached? %>
-  <%= cl_image_tag @booking.metaverse.pictures[0].key, crop: :fill, class: "card-category rounded-top", alt: "principal metaverse picture"  %>
-<% else %>
-  <img class="card-category rounded-top" src="https://stylistme.com/wp-content/uploads/2022/02/Metaverse-guide-tuto.png" alt="principal metaverse picture">
-<% end %>
-  <%= @booking.metaverse.title %> booked, start the experience !
-  </div>
+    <div class="my-2 p-4">
+      <p><strong>Booking details</strong></p>
+      <ul>
+        <li>Arrival : <%= @booking.start_at %></li>
+        <li>Departure : <%= @booking.end_at %></li>
+        <li><%= @booking.metaverse.description %></li>
+      </ul>
+    </div>
 
 
   <p><strong>Booking details</strong></p>
@@ -21,3 +30,4 @@
 <%= link_to "Delete", booking_path(@booking), method: :delete, class: "btn btn-danger" %>
 
 </div>
+
