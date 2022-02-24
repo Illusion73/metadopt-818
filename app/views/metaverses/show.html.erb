@@ -1,15 +1,18 @@
 <div class="container my-5 w-75">
+  <h1 class="text-center"><%= @metaverse.title %></h1>
   <div>
+    <%= link_to "Back", metaverses_path, class: "btn btn-secondary mb-3"%>
+  </div>
+  <div class="image-show-meta">
     <% if @metaverse.pictures.attached? %>
-      <%#= cl_image_tag @metaverse.pictures[0].key, crop: :fill, class: "card-category"  %>
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="pause">
-              <%= cl_image_tag @metaverse.pictures[0].key, crop: :fill, class: "d-block w-100"  %>
+              <%= cl_image_tag @metaverse.pictures[0].key, crop: :fill %>
             </div>
             <% @metaverse.pictures[1..-1].each do |picture| %>
               <div class="carousel-item" data-bs-interval="pause">
-                <%= cl_image_tag picture.key, crop: :fill, class: "d-block w-100"  %>
+                <%= cl_image_tag picture.key, crop: :fill %>
               </div>
             <%end %>
           </div>
@@ -24,25 +27,22 @@
         </div>
     <% else %>
       <img src="https://stylistme.com/wp-content/uploads/2022/02/Metaverse-guide-tuto.png"
-           alt="metaverse picture"
-           class= "d-block w-100">
+           alt="metaverse picture">
     <% end %>
+  <h4><span class="badge bg-warning"><%= @metaverse.category %></span></h4>
   </div>
-  <div>
-      <span class="badge bg-warning"><%= @metaverse.category %></span>
-    <div class="info-and-resa">
-      <div class="show-description" id="meta-description">
-        <p><%= @metaverse.description %></p>
-      </div>
-      <%= render 'bookings/form', metaverse: @metaverse, booking: @booking %>
+  <div class="description-booking">
+    <div id="meta-description">
+      <p><%= @metaverse.description %></p>
     </div>
+    <%= render 'bookings/form', metaverse: @metaverse, booking: @booking %>
   </div>
-  <div class="reviews my-3">
+  <div class="reviews-display my-3 text-center">
     <% @metaverse.reviews.each do |review| %>
-      <%= review.user.first_name %>
-      <%= review.content %>
-      <%= review.rating %>
+      <p><strong><%= review.user.first_name %></strong> - <% review.rating.times do %>
+        <span>⭐</span>
+      <% end %></p>
+      <p>"<%= review.content %>"</p>
     <% end %>
   </div>
-  <%= link_to "Back", metaverses_path, class: "btn btn-secondary"%>
 </div>
