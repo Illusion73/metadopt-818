@@ -4,11 +4,11 @@
       <%#= cl_image_tag @metaverse.pictures[0].key, crop: :fill, class: "card-category"  %>
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
           <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item active" data-bs-interval="pause">
               <%= cl_image_tag @metaverse.pictures[0].key, crop: :fill, class: "d-block w-100"  %>
             </div>
             <% @metaverse.pictures[1..-1].each do |picture| %>
-              <div class="carousel-item">
+              <div class="carousel-item" data-bs-interval="pause">
                 <%= cl_image_tag picture.key, crop: :fill, class: "d-block w-100"  %>
               </div>
             <%end %>
