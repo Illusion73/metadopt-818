@@ -27,8 +27,10 @@
                     <p> To <%= booking.end_at %></p>
                   </div>
                   <% if booking.current_user_can_leave_review? %>
-                    <%= link_to "Leave a review", new_booking_review_path(booking),
-                                                  class: "btn btn-primary" %>
+                    <div class="button-review">
+                      <%= link_to "Leave a review", new_booking_review_path(booking),
+                                                  class: "btn btn-link" %>
+                    </div>
                   <% end %>
                 <% end %>
               </div>
