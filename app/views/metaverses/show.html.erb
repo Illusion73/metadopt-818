@@ -29,11 +29,12 @@
     <% end %>
   </div>
   <div>
-    <div>
       <span class="badge bg-warning"><%= @metaverse.category %></span>
-      <div class="show-description">
+    <div class="info-and-resa">
+      <div class="show-description" id="meta-description">
         <p><%= @metaverse.description %></p>
       </div>
+      <%= render 'bookings/form', metaverse: @metaverse, booking: @booking %>
     </div>
   </div>
   <div class="reviews my-3">
@@ -43,6 +44,5 @@
       <%= review.rating %>
     <% end %>
   </div>
-  <%= render 'bookings/form', metaverse: @metaverse, booking: @booking %>
   <%= link_to "Back", metaverses_path, class: "btn btn-secondary"%>
 </div>
