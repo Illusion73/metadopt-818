@@ -8,15 +8,21 @@
   <section class="categories ">
     <h2 class="text-center my-4">Categories</h2>
     <div class="section-category-card grid grid--3-cols py-4">
-      <div class="card-category history">
-        <h3>History</h3>
-      </div>
-      <div class="card-category future">
-        <h3>Future</h3>
-      </div>
-      <div class="card-category fantasy">
-        <h3>Fantasy</h3>
-      </div>
+      <%= link_to metaverses_path(query: "History") do %>
+        <div class="card-category history">
+          <h3>History</h3>
+        </div>
+      <% end %>
+      <%= link_to metaverses_path(query: "Future") do %>
+        <div class="card-category future">
+          <h3>Future</h3>
+        </div>
+      <% end %>
+      <%= link_to metaverses_path(query: "Fantasy") do %>
+        <div class="card-category fantasy">
+          <h3>Fantasy</h3>
+        </div>
+      <% end %>
     </div>
   </section>
 
