@@ -1,7 +1,5 @@
 <div class="container my-5 w-75">
-
-
-  <div class="card-trip">
+  <div>
     <% if @metaverse.pictures.attached? %>
       <%#= cl_image_tag @metaverse.pictures[0].key, crop: :fill, class: "card-category"  %>
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -25,17 +23,16 @@
           </button>
         </div>
     <% else %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://stylistme.com/wp-content/uploads/2022/02/Metaverse-guide-tuto.png)"></div>
+      <img src="https://stylistme.com/wp-content/uploads/2022/02/Metaverse-guide-tuto.png"
+           alt="metaverse picture"
+           class= "d-block w-100">
     <% end %>
-    <div class="card-trip-infos">
-      <div>
-        <span class="badge bg-warning"><%= @metaverse.category %></span>
-        <div class="show-description">
-          <p><%= @metaverse.description %></p>
-        </div>
-        <div class="show-reviews">
-          <p><strong>TODO : display reviews</strong></p>
-        </div>
+  </div>
+  <div>
+    <div>
+      <span class="badge bg-warning"><%= @metaverse.category %></span>
+      <div class="show-description">
+        <p><%= @metaverse.description %></p>
       </div>
     </div>
   </div>
@@ -45,10 +42,7 @@
       <%= review.content %>
       <%= review.rating %>
     <% end %>
-    <div class="mt-4">
-      <h3 class="card-trip-pricing">€ <%= @metaverse.price %> / jour</h3>
-      <%= link_to "Book it", new_metaverse_booking_path(@metaverse), class: "btn btn-primary"%>
-      <%= link_to "Back to all Metaverses", metaverses_path, class: "btn btn-warning"%>
-    </div>
   </div>
+  <%= render 'bookings/form', metaverse: @metaverse, booking: @booking %>
+  <%= link_to "Back", metaverses_path, class: "btn btn-secondary"%>
 </div>

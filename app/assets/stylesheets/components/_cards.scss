@@ -80,7 +80,8 @@
 
 .card-meta-index {
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 8px;
   padding: 0;
   display: flex;
 
@@ -115,5 +116,19 @@
            line-clamp: 2;
    -webkit-box-orient: vertical;
    color: rgb(65, 65, 65);
+  }
+}
+
+.card-booking-meta-show {
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  display: table-caption;
+  padding: 10px;
+  text-align: center;
+
+  .items {
+    display: block;
+    margin: 10px;
   }
 }

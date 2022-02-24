@@ -13,6 +13,7 @@ class MetaversesController < ApplicationController
 
   def show
     @reviews = @metaverse.reviews
+    @booking = Booking.new
   end
 
   def edit
