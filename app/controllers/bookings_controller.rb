@@ -10,7 +10,8 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to metaverse_booking_path(@metaverse, @booking)
     else
-      render :new
+      # render "metaverses/show"
+      redirect_to metaverse_path(@metaverse), notice: "Puts a date"
     end
   end
 
