@@ -22,9 +22,8 @@
                   <img class="image rounded-top" src="https://stylistme.com/wp-content/uploads/2022/02/Metaverse-guide-tuto.png" alt="principal metaverse picture">
                 <% end %>
                   <div class="body">
-                    <h5><%= booking.metaverse.title %></h5>
-                    <p> From <%= booking.start_at %></p>
-                    <p> To <%= booking.end_at %></p>
+                    <h5><strong><%= booking.metaverse.title %></strong></h5>
+                    <p> From <%= booking.start_at %> to <%= booking.end_at %></p>
                   </div>
                   <% if booking.current_user_can_leave_review? %>
                     <div class="button-review">
@@ -89,8 +88,7 @@
                   <% end %>
                     <div class="body">
                       <h5> <%=booking.metaverse.title %></h5>
-                      <p>From <%= booking.start_at %></p>
-                      <p>To <%= booking.end_at %></p>
+                      <p> From <%= booking.start_at %> to <%= booking.end_at %></p>
                     </div>
                 <%end  %>
               </div>
