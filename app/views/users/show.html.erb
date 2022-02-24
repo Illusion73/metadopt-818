@@ -19,7 +19,11 @@
                   <%= link_to "Review", new_booking_review_path(booking) %>
                 <% end %>
                 <%= link_to metaverse_booking_path(booking.metaverse.id,booking) do %>
-                  <img class="image" src="" alt="Card image cap">
+                <% if booking.metaverse.pictures.attached? %>
+                  <%= cl_image_tag booking.metaverse.pictures[0].key, crop: :fill, class: "image rounded-top", alt: "principal metaverse picture"  %>
+                <% else %>
+                  <img class="image rounded-top" src="https://stylistme.com/wp-content/uploads/2022/02/Metaverse-guide-tuto.png" alt="principal metaverse picture">
+                <% end %>
                   <div class="body">
                     <h5><%= booking.metaverse.title %></h5>
                     <p> From <%= booking.start_at %></p>
@@ -46,7 +50,11 @@
             <% @metaverses.each do |metaverse| %>
               <div class="card-user-booking">
                 <%= link_to metaverse_path(metaverse) do %>
-                    <img class="image" src="" alt="Card image cap">
+                    <% if metaverse.pictures.attached? %>
+                      <%= cl_image_tag metaverse.pictures[0].key, crop: :fill, class: "card-img-top rounded-top", alt: "principal metaverse picture"  %>
+                    <% else %>
+                      <img class="card-img-top rounded-top" src="https://stylistme.com/wp-content/uploads/2022/02/Metaverse-guide-tuto.png" alt="principal metaverse picture">
+                    <% end %>
                     <div class="body">
                       <h5> <%=  metaverse.title %></h5>
                     </div>
@@ -71,8 +79,11 @@
             <% @owner_booked_metaverses.each do |booking| %>
               <div class="card-user-booking">
                 <%= link_to metaverse_path(booking.metaverse) do %>
-
-                    <img class="image" src="" alt="Card image cap">
+                  <% if booking.metaverse.pictures.attached? %>
+                    <%= cl_image_tag booking.metaverse.pictures[0].key, crop: :fill, class: "image rounded-top", alt: "principal metaverse picture"  %>
+                  <% else %>
+                    <img class="image rounded-top" src="https://stylistme.com/wp-content/uploads/2022/02/Metaverse-guide-tuto.png" alt="principal metaverse picture">
+                  <% end %>
                     <div class="body">
                       <h5> <%=booking.metaverse.title %></h5>
                       <p>From <%= booking.start_at %></p>
