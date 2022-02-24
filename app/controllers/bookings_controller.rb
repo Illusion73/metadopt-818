@@ -1,10 +1,6 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :destroy, :edit, :update]
-  before_action :set_metaverse, only: [:show, :new, :create, :edit, :update]
-
-  def new
-    @booking = Booking.new
-  end
+  before_action :set_metaverse, only: [:show, :create, :edit, :update]
 
   def create
     @booking = Booking.new(booking_params)

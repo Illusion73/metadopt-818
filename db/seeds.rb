@@ -8,7 +8,6 @@
 
 require "open-uri"
 
-
 Review.destroy_all
 Booking.destroy_all
 Metaverse.destroy_all
@@ -70,7 +69,6 @@ file = URI.open('https://i.jeuxactus.com/datas/jeux/s/t/star-wars-eclipse/xl/sta
 meta1.pictures.attach(io: file, filename: 'eclipse.png', content_type: 'image/png')
 file = URI.open('https://static2.srcdn.com/wordpress/wp-content/uploads/2021/12/Star-Wars-Eclipse-Prequel-Ship.jpg')
 meta1.pictures.attach(io: file, filename: 'eclipse.png', content_type: 'image/png')
-
 
 meta2 = Metaverse.new(
   title: "The Expanse",
