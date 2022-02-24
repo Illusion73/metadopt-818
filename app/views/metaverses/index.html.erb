@@ -9,13 +9,27 @@
     <%= submit_tag "Search", class: "btn btn-primary" %>
   <% end %>
 </div>
+
+
 <div class="container">
   <div class="grid grid--2-cols grid-margin-bottom">
     <% @metaverses.each do |metaverse| %>
       <div class="card-meta-index">
         <%= link_to metaverse_path(metaverse)  do %>
               <% if metaverse.pictures.attached? %>
-                <%= cl_image_tag metaverse.pictures[0].key, crop: :fill, class: "card-img-top rounded-top", alt: "principal metaverse picture"  %>
+                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval=<%= rand(2700..3000) %>>
+
+                      <%= cl_image_tag metaverse.pictures[0].key, crop: :fill, class: "d-block w-100"  %>
+                    </div>
+                    <% metaverse.pictures[1..2].each do |picture| %>
+                      <div class="carousel-item" data-bs-interval=<%= rand(2700..3000) %>>
+                        <%= cl_image_tag picture.key, crop: :fill, class: "d-block w-100"  %>
+                      </div>
+                    <%end %>
+                  </div>
+                </div>
               <% else %>
                 <img class="card-img-top rounded-top" src="https://stylistme.com/wp-content/uploads/2022/02/Metaverse-guide-tuto.png" alt="principal metaverse picture">
               <% end %>

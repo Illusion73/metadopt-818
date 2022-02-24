@@ -5,7 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require 'faker'
+
+require "open-uri"
+
 Review.destroy_all
 Booking.destroy_all
 Metaverse.destroy_all
@@ -61,6 +63,12 @@ meta1 = Metaverse.new(
   user: user1
 )
 meta1.save!
+file = URI.open('https://www.sortiraparis.com/images/80/66131/710174-star-wars-eclipse-bande-annonce-pour-le-jeu-signe-quantic-dream-au-game-award.jpg')
+meta1.pictures.attach(io: file, filename: 'eclipse.png', content_type: 'image/png')
+file = URI.open('https://i.jeuxactus.com/datas/jeux/s/t/star-wars-eclipse/xl/star-wars-eclipse-61b2d0a842731.jpg')
+meta1.pictures.attach(io: file, filename: 'eclipse.png', content_type: 'image/png')
+file = URI.open('https://static2.srcdn.com/wordpress/wp-content/uploads/2021/12/Star-Wars-Eclipse-Prequel-Ship.jpg')
+meta1.pictures.attach(io: file, filename: 'eclipse.png', content_type: 'image/png')
 
 meta2 = Metaverse.new(
   title: "The Expanse",
@@ -70,6 +78,12 @@ meta2 = Metaverse.new(
   user: user1
 )
 meta2.save!
+file = URI.open('https://sm.ign.com/t/ign_fr/screenshot/default/the-expanse-header-1200x675_xwjz.1280.jpg')
+meta2.pictures.attach(io: file, filename: 'expanse.png', content_type: 'image/png')
+file = URI.open('https://www.journaldugeek.com/wp-content/blogs.dir/1/files/2016/12/The-Expanse-1.jpg')
+meta2.pictures.attach(io: file, filename: 'expanse.png', content_type: 'image/png')
+file = URI.open('https://static.wikia.nocookie.net/expanse/images/4/47/PellaConceptship.png/revision/latest?cb=20201223193751')
+meta2.pictures.attach(io: file, filename: 'expanse.png', content_type: 'image/png')
 
 meta3 = Metaverse.new(
   title: "Lords of the Metarings",
@@ -79,6 +93,14 @@ meta3 = Metaverse.new(
   user: user2
 )
 meta3.save!
+file = URI.open('http://images.gmanews.tv/webpics/2021/11/weta_lotr_2021_11_10_20_26_34.jpg')
+meta3.pictures.attach(io: file, filename: 'ring.png', content_type: 'image/png')
+file = URI.open('https://actualitte.com/uploads/images/amazonstudios-serie-lord-of-the-rings-saison-2-2021-611637fccc422084209644.jpg')
+meta3.pictures.attach(io: file, filename: 'ring.png', content_type: 'image/png')
+file = URI.open('https://variety.com/wp-content/uploads/2022/02/The-Lord-of-the-Rings-The-War-of-the-Rohirrim-Variety-Exclusive-16x9-1.jpg')
+meta3.pictures.attach(io: file, filename: 'ring.png', content_type: 'image/png')
+
+p 'Oui c\'est long ...'
 
 meta4 = Metaverse.new(
   title: "Hogwards - The Chamber of the Metaverse",
@@ -88,6 +110,14 @@ meta4 = Metaverse.new(
   user: user3
 )
 meta4.save!
+file = URI.open('https://www.gamosaurus.com/wp-content/uploads/AAA/Warner-Bros/Harry-Potter/vignette-harry-potter-rpg-jeu-de-role-hogwarts-a-dark-legacy-rumeurs-theories-leak.jpg')
+meta4.pictures.attach(io: file, filename: 'potter.png', content_type: 'image/png')
+file = URI.open('https://cdn.pocket-lint.com/r/s/970x/assets/images/155407-games-news-feature-hogwarts-legacy-release-date-formats-and-everything-you-need-to-know-about-the-harry-potter-rpg-image1-qyshi4lowj-jpg.webp')
+meta4.pictures.attach(io: file, filename: 'potter.png', content_type: 'image/png')
+file = URI.open('https://jolstatic.fr/www/captures/5103/5/146445.jpg')
+meta4.pictures.attach(io: file, filename: 'potter.png', content_type: 'image/png')
+
+p "mais c'est normal... "
 
 meta5 = Metaverse.new(
   title: "Middle Age of Darkness",
@@ -97,6 +127,14 @@ meta5 = Metaverse.new(
   user: user3
 )
 meta5.save!
+file = URI.open('https://cdnb.artstation.com/p/assets/images/images/002/162/281/large/alexander-dudar-dark-ages-of-anstard-scene-1.jpg?1458073833')
+meta5.pictures.attach(io: file, filename: 'middle.png', content_type: 'image/png')
+file = URI.open('https://images.ctfassets.net/cnu0m8re1exe/373mnVPWLVwG6R3PM8AzAs/8f713da65f353fbe08b482c59179db61/shutterstock_1104021251.jpg?fm=jpg&fl=progressive&w=660&h=433&fit=fill')
+meta5.pictures.attach(io: file, filename: 'middle.png', content_type: 'image/png')
+file = URI.open('https://miro.medium.com/max/1192/1*I-ZoS96meroNgORR26HAYA.jpeg')
+meta5.pictures.attach(io: file, filename: 'middle.png', content_type: 'image/png')
+
+p "t'inquiète ma gueule, ça marche là"
 
 meta6 = Metaverse.new(
   title: "Far in the West World",
@@ -106,10 +144,17 @@ meta6 = Metaverse.new(
   user: user4
 )
 meta6.save!
+file = URI.open('https://cdn.sidlee.com/-/media/sidlee/work/hbo/westworld/ww_3.png?mw=1420&hash=53D419150D16B7024C3BCC01794288E1A52A6939')
+meta6.pictures.attach(io: file, filename: 'farwest.png', content_type: 'image/png')
+file = URI.open('https://www.premiere.fr/sites/default/files/styles/scale_crop_1280x720/public/2018-04/westworld-episode-7_0.jpg')
+meta6.pictures.attach(io: file, filename: 'farwest.png', content_type: 'image/png')
+file = URI.open('https://thumb.canalplus.pro/http/unsafe/1280x720/filters:quality(80)/img-hapi.canalplus.pro:80/ServiceImage/ImageID/58157145')
+meta6.pictures.attach(io: file, filename: 'farwest.png', content_type: 'image/png')
 
-puts 'Metaverses created !'
+puts 'Metaverses created !  Tu vois ?'
 
-puts "Creating Bookings"
+puts "Creating fake Bookings"
+
 booking1 = Booking.create(
   start_at: Date.today - 2,
   end_at: Date.today - 2,
@@ -131,11 +176,25 @@ booking3 = Booking.create(
   metaverse: meta1
 )
 
+puts "3 fake bookings created ! "
 
-review1 =Review.create(
-  content: "toto",
+puts "Creating fake reviews"
+
+
+review1 = Review.create(
+  content: "Incroyable métaverse ce Star Wars Eclipse ! On peut tout faire c'est impressionnant. Je me suis même mis un sabre laser dans le cul, j'avais toujours voulu tester ça avec ma mattraque ! Je recommande.",
   rating: 3,
   user: user3,
   booking: booking1
 )
-p 'data has been created'
+
+review2 = Review.create(
+  content: "Qui veut un salade tomate oignons ? Ah merde je me suis trompé d'onglet... Ouais trop stylé ce metaverse. Book ma gueule !",
+  rating: 5,
+  user: user4,
+  booking: booking1
+)
+
+puts "2 fake reviews created ! "
+puts
+p 'All seeds have been created !'
