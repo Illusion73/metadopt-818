@@ -38,7 +38,7 @@
     </div>
     <%= render 'bookings/form', metaverse: @metaverse, booking: @booking %>
   </div>
-  <div class="reviews-display my-3 text-center">
+  <div class="reviews-display my-3">
     <% @metaverse.reviews.each do |review| %>
       <p><strong><%= review.user.first_name %></strong> - <% review.rating.times do %>
         <span>⭐</span>
