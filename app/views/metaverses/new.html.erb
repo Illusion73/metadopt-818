@@ -5,13 +5,15 @@
   <%= simple_form_for(@metaverse) do |f| %>
       <%= f.input :title %>
       <%= f.input :description %>
-      <%= f.input :price %>
+      <%= f.input :price, hint:"Should be in €"%>
+      <%= f.input :category, collection: ["history", "future", "fantasy"]%>
       <%= f.input :pictures, as: :file, input_html: { multiple: true } %>
-      <%= f.input :category, collection: ["history", "future", "fantasy"] %>
-      <%= f.submit %>
+      <%= f.button :submit, class: "btn btn-primary my-2 w-100"%>
+
+      <%#= f.button :submit, class: "btn btn-success my-2 w-100"%>
   <% end %>
   <br>
   <div>
-    <%= link_to "Back to list", metaverses_path, class: "btn btn-primary" %>
+    <%#= link_to "Back to list", metaverses_path, class: "btn btn-primary" %>
   </div>
 </div>
