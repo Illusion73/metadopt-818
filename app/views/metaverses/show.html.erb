@@ -30,7 +30,7 @@
       <img src="https://stylistme.com/wp-content/uploads/2022/02/Metaverse-guide-tuto.png"
            alt="metaverse picture">
     <% end %>
-  <h4><span class="badge bg-warning"><%= @metaverse.category %></span></h4>
+  <h4><span class="badge bg-warning"><%=link_to @metaverse.category, metaverses_path(query: @metaverse.category) %></span></h4>
   </div>
   <div class="description-booking">
     <div id="meta-description">
