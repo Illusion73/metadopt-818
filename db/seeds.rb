@@ -70,6 +70,25 @@ meta1.pictures.attach(io: file, filename: 'eclipse.png', content_type: 'image/pn
 file = URI.open('https://static2.srcdn.com/wordpress/wp-content/uploads/2021/12/Star-Wars-Eclipse-Prequel-Ship.jpg')
 meta1.pictures.attach(io: file, filename: 'eclipse.png', content_type: 'image/png')
 
+p '1'
+
+m1 = Metaverse.new(
+  title: "Metalove",
+  category: "fantasy",
+  description: "Never found love ? Still a virgin ? Your name is Val ? This metaverse experience is made for you ! Here you can experience all type of love, of kind of sex. Connect your sex device with Metadopt for a better experience of futur sex, euhhh love... From Booba to Herminone, from Vin Diezel to Mini Maty, try your partners by booking this metaverse today.",
+  price: 629,
+  user: user1
+)
+m1.save!
+file = URI.open('https://www.roamingparis.com/wp-content/uploads/2021/11/paper-heart-eiffel-tower-2.jpg')
+m1.pictures.attach(io: file, filename: 'eclipse.png', content_type: 'image/png')
+file = URI.open('https://images.hindustantimes.com/img/2021/07/31/1600x900/ff71501a-f1ea-11eb-a289-ca42522c9120_1627727894985.jpg')
+m1.pictures.attach(io: file, filename: 'eclipse.png', content_type: 'image/png')
+file = URI.open('https://64.media.tumblr.com/64f7eeefb327d1e42f6f1225c17f59a4/tumblr_inline_p7s8gjZWP61r02mf8_1280.jpg')
+m1.pictures.attach(io: file, filename: 'eclipse.png', content_type: 'image/png')
+
+p '2'
+
 meta2 = Metaverse.new(
   title: "The Expanse",
   category: "future",
@@ -84,6 +103,27 @@ file = URI.open('https://www.journaldugeek.com/wp-content/blogs.dir/1/files/2016
 meta2.pictures.attach(io: file, filename: 'expanse.png', content_type: 'image/png')
 file = URI.open('https://static.wikia.nocookie.net/expanse/images/4/47/PellaConceptship.png/revision/latest?cb=20201223193751')
 meta2.pictures.attach(io: file, filename: 'expanse.png', content_type: 'image/png')
+
+p '3'
+
+m2 = Metaverse.new(
+  title: "Horror of war",
+  category: "future",
+  description: "You ever wanted to visit an evil land with the devil runnning it ? Well you know where we are going ? From the frozen lands to the Black Sea, experiement a metaverse in the horror of war. Is it really something you want to experience, you sick fuck ? Then go fight in Ukrain or book this metaverse, and we'll send 50% of your booking fees to our brothers in Ukrain.",
+  price: 229,
+  user: user4
+)
+m2.save!
+file = URI.open('https://static.fnac-static.com/multimedia/Images/FD/Comete/143422/CCP_IMG_ORIGINAL/1887795.jpg')
+m2.pictures.attach(io: file, filename: 'eclipse.png', content_type: 'image/png')
+file = URI.open('https://www.cointribune.com/app/uploads/2022/01/memed-io-output.jpeg')
+m2.pictures.attach(io: file, filename: 'eclipse.png', content_type: 'image/png')
+file = URI.open('https://img.myloview.fr/papiers-peints/union-sovietique-urss-carte-700-66671130.jpg')
+m2.pictures.attach(io: file, filename: 'eclipse.png', content_type: 'image/png')
+file = URI.open('https://resize-europe1.lanmedia.fr/r/622,311,forcex,center-middle/img/var/europe1/storage/images/europe1/international/guerre-en-ukraine-ce-que-lon-sait-de-la-situation-sur-place-a-la-mi-journee-4095820/58251416-12-fre-FR/Guerre-en-Ukraine-ce-qu-il-faut-retenir-de-l-invasion-russe.jpg')
+m2.pictures.attach(io: file, filename: 'eclipse.png', content_type: 'image/png')
+
+p '4'
 
 meta3 = Metaverse.new(
   title: "Lords of the Metarings",
@@ -100,7 +140,24 @@ meta3.pictures.attach(io: file, filename: 'ring.png', content_type: 'image/png')
 file = URI.open('https://variety.com/wp-content/uploads/2022/02/The-Lord-of-the-Rings-The-War-of-the-Rohirrim-Variety-Exclusive-16x9-1.jpg')
 meta3.pictures.attach(io: file, filename: 'ring.png', content_type: 'image/png')
 
-p 'Oui c\'est long ...'
+p '5'
+
+m3 = Metaverse.new(
+  title: "Ottoman Empire Fantasy",
+  category: "history",
+  description: "Did you ever feel you want to conquer Constantinople ? To burn all impious and corrupted christans ? Dive into this historic metaverse of the Ottoman Empire. Build the biggest empire between Asia and Europa, let the Sultan up to Europe and build your harem. Rise and book our lastest historic experience.",
+  price: 666,
+  user: user3
+)
+m3.save!
+file = URI.open('https://www.toutelaturquie.com/wp-content/uploads/2020/08/ottoman-rising-dizisi-nedir-netflixin-yeni-dizisi-osmanli-yukseliyor-e1596890657282.jpg')
+m3.pictures.attach(io: file, filename: 'eclipse.png', content_type: 'image/png')
+file = URI.open('https://i0.wp.com/www.hisour.com/wp-content/uploads/2018/06/Harem.jpg?w=960&ssl=1')
+m3.pictures.attach(io: file, filename: 'eclipse.png', content_type: 'image/png')
+file = URI.open('https://www.propertyturkey.com/uploads/pages/larg/constantinople.jpg')
+m3.pictures.attach(io: file, filename: 'eclipse.png', content_type: 'image/png')
+
+p '6'
 
 meta4 = Metaverse.new(
   title: "Hogwards - The Chamber of the Metaverse",
@@ -117,7 +174,24 @@ meta4.pictures.attach(io: file, filename: 'potter.png', content_type: 'image/png
 file = URI.open('https://jolstatic.fr/www/captures/5103/5/146445.jpg')
 meta4.pictures.attach(io: file, filename: 'potter.png', content_type: 'image/png')
 
-p "mais c'est normal... "
+p "7"
+
+m4 = Metaverse.new(
+  title: "Putine Meta Life",
+  category: "fantasy",
+  description: "Enter a world dedicated to Putin where Quebec goes to war with Russia. Experience an unforgettable experience by sending nuclear fries to your idol. Will you succeed in this challenge and avoid being sent to the gulag for the rest of your life?",
+  price: 999,
+  user: user2
+)
+m4.save!
+file = URI.open('https://lapoutine.fr/img/lapoutinefacebook.jpg')
+m4.pictures.attach(io: file, filename: 'eclipse.png', content_type: 'image/png')
+file = URI.open('https://i.redd.it/jjzinn777z101.png')
+m4.pictures.attach(io: file, filename: 'eclipse.png', content_type: 'image/png')
+file = URI.open('https://cdni.rt.com/french/images/2018.09/article/5b97d84309fac2a2138b4567.jpg')
+m4.pictures.attach(io: file, filename: 'eclipse.png', content_type: 'image/png')
+
+p '8'
 
 meta5 = Metaverse.new(
   title: "Middle Age of Darkness",
@@ -134,7 +208,7 @@ meta5.pictures.attach(io: file, filename: 'middle.png', content_type: 'image/png
 file = URI.open('https://miro.medium.com/max/1192/1*I-ZoS96meroNgORR26HAYA.jpeg')
 meta5.pictures.attach(io: file, filename: 'middle.png', content_type: 'image/png')
 
-p "t'inquiète ma gueule, ça marche là"
+p "9"
 
 meta6 = Metaverse.new(
   title: "Far in the West World",
