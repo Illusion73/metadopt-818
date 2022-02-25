@@ -6,11 +6,11 @@
       <%= f.input :rating, class: "mb-3", collection: (1..5) %>
       <%= f.input :content, class: "mb-3"  %>
       <div class="text-center">
-        <%= f.button :submit, class: "btn btn-primary "%>
+        <%= f.button :submit, class: "btn btn-primary my-3  "%>
       </div>
     <% end %>
   </div>
-  <div class="text-center mt-5">
-    <%#= link_to "Back", booking_path(@booking), class: "btn-booking" %>
+  <div class="text-center mt-3 ">
+    <%= link_to "Back", user_path(current_user), class:"text-muted" %>
   </div>
 </div>
