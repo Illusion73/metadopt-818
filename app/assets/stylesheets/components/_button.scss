@@ -9,12 +9,24 @@
 
 .btn-booking{
   border: 1px gray solid;
-  border-radius: 8px;
+  border-radius: 2px;
   color: grey;
-  font-size: 20PX;
+  font-size: 1rem;
   padding: 8px 16px;
   &:hover{
     background-color: grey;
     color: white;
+  }
+}
+
+.btn-profil{
+  border: 1px gray solid;
+  border-radius: 2px;
+  color: grey;
+  font-size: 1rem;
+  padding: 8px 16px;
+  &:hover{
+    background-color: #FFCF73;
+    color: rgb(29, 29, 29);
   }
 }
