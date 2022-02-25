@@ -20,9 +20,11 @@
 
 
 <div class="btn-edit-delete">
-  <%= link_to "My profil", user_path(current_user), class:"btn-profil" %>
-  <%= link_to "Edit", edit_metaverse_booking_path([@metaverse, @booking]), class:"btn-booking" %>
-  <%= link_to "Delete", booking_path(@booking), method: :delete, class:"btn-booking" %>
+  <% if  @booking.start_at > Date.today  %>
+    <%= link_to "Edit", edit_metaverse_booking_path([@metaverse, @booking]), class:"btn-booking" %>
+    <%= link_to "Delete", booking_path(@booking), method: :delete, class:"btn-booking" %>
+  <%end  %>
+    <%= link_to "My profil", user_path(current_user), class:"btn-profil" %>
 </div>
 
 </div>
