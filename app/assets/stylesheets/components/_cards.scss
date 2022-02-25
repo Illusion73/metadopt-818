@@ -142,7 +142,7 @@
     transition: all 0.3s;
 
     &:hover {
-      color: rgb(63, 63, 63);
+      background-color: $yellow !important;
     }
   }
 }
