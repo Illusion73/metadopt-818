@@ -6,7 +6,7 @@
       class: "form-control",
       placeholder: "Find a metaverse"
     %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
+    <%= submit_tag "Search", class: "btn btn-success" %>
   </div>
 <% end %>
 
@@ -16,6 +16,7 @@
     <% @metaverses.each do |metaverse| %>
       <div class="card-meta-index">
         <%= link_to metaverse_path(metaverse)  do %>
+              <span class="badge bg-light category"><%= metaverse.category %></span>
               <% if metaverse.pictures.attached? %>
                 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                   <div class="carousel-inner">
@@ -29,8 +30,7 @@
               <% end %>
               <div class="body">
                 <h5><%= metaverse.title %></h5>
-                <p><%= metaverse.price %>€</p>
-                <span class="badge bg-warning category"><%= metaverse.category %></span>
+                <p class="price"><%= metaverse.price %>€ / day</p>
                 <p class="description"><%= metaverse.description %></p>
               </div>
         <% end %>
