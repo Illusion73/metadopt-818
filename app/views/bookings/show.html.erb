@@ -1,15 +1,8 @@
  <div class="container my-4 w-75">
-  <div class="mb-4">
-    <h1 class="text-center pb-3">My booking</h1>
-    <h3 class="text-center pb-3 text-primary"><%= @booking.metaverse.title %></h3>
-    <% if @booking.metaverse.pictures.attached? %>
-      <%= cl_image_tag @booking.metaverse.pictures[0].key, crop: :fill, class: "mb-2 w-100", alt: "principal metaverse picture"  %>
-    <% else %>
-      <img class="mb-2" src="https://stylistme.com/wp-content/uploads/2022/02/Metaverse-guide-tuto.png" alt="principal metaverse picture">
-    <% end %>
-  </div>
 
-  <div class="my-2 mb-4">
+  <div class="mt-2 mb-4">
+    <h1 class="text-center pb-3 border-bottom mb-4">My booking</h1>
+    <h3 class="text-center pb-3 text-primary mb-4"><%= @booking.metaverse.title %></h3>
     <h4><strong>Booking details</strong></h4>
     <ul>
       <li class="mb-4">From <%= @booking.start_at %> to <%= @booking.end_at %></li>
@@ -17,6 +10,13 @@
     </ul>
   </div>
 
+  <div class="mb-4">
+    <% if @booking.metaverse.pictures.attached? %>
+      <%= cl_image_tag @booking.metaverse.pictures[0].key, crop: :fill, class: "mb-2 w-100", alt: "principal metaverse picture"  %>
+    <% else %>
+      <img class="mb-2" src="https://stylistme.com/wp-content/uploads/2022/02/Metaverse-guide-tuto.png" alt="principal metaverse picture">
+    <% end %>
+  </div>
 
 <div class="btn-edit-delete">
   <% if  @booking.start_at > Date.today  %>
