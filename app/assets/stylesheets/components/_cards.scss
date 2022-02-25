@@ -187,8 +187,20 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   display: table-caption;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
+
+  .form-control {
+    width: auto;
+  }
+
+  .title {
+    font-weight: bold;
+  }
+
+  .price {
+    font-size: 16px;
+  }
 
   .items {
     display: block;
