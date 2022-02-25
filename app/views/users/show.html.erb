@@ -53,7 +53,7 @@
             <% @metaverses.each do |metaverse| %>
               <div class="card-user-booking">
                 <%= link_to metaverse_path(metaverse) do %>
-                    <span><%=link_to metaverse.category, metaverses_path(query: metaverse.category), class: "category badge bg-light"%></span>
+                    <span class="badge bg-light category"><%= metaverse.category %></span>
                     <% if metaverse.pictures.attached? %>
                       <%= cl_image_tag metaverse.pictures[0].key, crop: :fill, class: "image rounded-top", alt: "principal metaverse picture"  %>
                     <% else %>
