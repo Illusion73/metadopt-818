@@ -1,11 +1,25 @@
-.description-booking{
+.body-show-meta {
   display: flex;
   margin-top: 1rem;
+
+  .description {
+    margin-right: 1rem;
+    font-size: 20px;
+  }
+
 }
 
-#meta-description {
-  border-bottom: 1px solid rgb(196, 194, 194);
-  margin-right: 1rem;
+.card-review {
+  .name-star {
+    margin-bottom: 5px;
+  }
+
+  .content {
+    color: rgb(61, 61, 61);
+    margin-bottom: 0;
+    font-size: 14px;
+    padding-bottom: 20px;
+  }
 }
 
 .image-show-meta {
@@ -19,10 +33,17 @@
     border-radius: 8px;
   }
 
-  h4 {
+  .category {
     position: absolute;
     top: 10px;
     right: 10px;
     z-index: 1;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    color: rgb(24, 24, 24);
+    transition: all 0.3s;
+
+    &:hover {
+      color: rgb(63, 63, 63);
+    }
   }
 }

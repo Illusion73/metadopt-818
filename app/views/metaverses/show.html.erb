@@ -1,10 +1,9 @@
 <div class="container my-4 w-75">
   <h1 class="text-center"><%= @metaverse.title %></h1>
   <div>
-    <%= link_to "All metaverses", metaverses_path, class: "btn btn-primary text-light mb-3"%>
-    <%= link_to "Back to profil", user_path(current_user), class: "btn btn-success text-light mb-3"%>
+    <%= link_to "All metaverses", metaverses_path, class: "btn btn-outline-primary"%>
   </div>
-  <div class="image-show-meta">
+  <div class="image-show-meta mt-4">
     <% if @metaverse.pictures.attached? %>
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
           <div class="carousel-inner">
@@ -30,20 +29,22 @@
       <img src="https://stylistme.com/wp-content/uploads/2022/02/Metaverse-guide-tuto.png"
            alt="metaverse picture">
     <% end %>
-  <h4><span class="badge bg-warning"><%=link_to @metaverse.category, metaverses_path(query: @metaverse.category) %></span></h4>
+    <h4><%=link_to @metaverse.category, metaverses_path(query: @metaverse.category), class: "category badge bg-light"%></h4>
   </div>
-  <div class="description-booking">
-    <div id="meta-description">
+  <div class="body-show-meta mb-4">
+    <div class="description">
       <p><%= @metaverse.description %></p>
     </div>
     <%= render 'bookings/form', metaverse: @metaverse, booking: @booking %>
   </div>
-  <div class="reviews-display my-3 text-center">
+  <div class="review my-3">
     <% @metaverse.reviews.each do |review| %>
-      <p><strong><%= review.user.first_name %></strong> - <% review.rating.times do %>
-        <span>⭐</span>
-      <% end %></p>
-      <p>"<%= review.content %>"</p>
+      <div class="card-review">
+        <p class="name-star"><strong><%= review.user.first_name %></strong> - <% review.rating.times do %>
+          <span>⭐</span>
+        <% end %></p>
+        <p class="content">"<%= review.content %>"</p>
+      </div>
     <% end %>
   </div>
 </div>

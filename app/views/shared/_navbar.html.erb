@@ -30,7 +30,9 @@
 
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                   <li><%= link_to "My profil", user_path(current_user), class:"dropdown-item" %></li>
-                  <li><%= link_to "Add your metaverse", new_metaverse_path, class:"dropdown-item" %></li>
+
+                  <li><%= link_to "Add a metaverse", new_metaverse_path, class:"dropdown-item" %></li>
+
                   <li><%= link_to "Sign out", destroy_user_session_path, method: :delete, class:"dropdown-item" %></li>
                 </ul>
               </div>
