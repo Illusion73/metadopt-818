@@ -10,13 +10,12 @@
   </div>
 <% end %>
 
-
 <div class="container">
   <div class="grid grid--2-cols grid-margin-bottom">
     <% @metaverses.each do |metaverse| %>
       <div class="card-meta-index">
-        <%= link_to metaverse_path(metaverse)  do %>
-              <span class="badge bg-light category"><%= metaverse.category %></span>
+        <%= link_to metaverse_path(metaverse) do %>
+          <span class="badge bg-light category"><%= metaverse.category %></span>
               <% if metaverse.pictures.attached? %>
                 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
                   <div class="carousel-inner">
